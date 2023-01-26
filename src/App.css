@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+body{
+    margin: 0.5vw;
+}
+.headerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#myList{
+    width: 95%;
+    margin: 0vw 1vw;
+    height: 2vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tzDiv{
+    margin: 1vw 0;
+    padding: 1vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.weekDayIND{
+    color: brown;
+    background-color: silver;
+    display: inline-block;
+    width: 4vw;
+    height: 7vw;
+}
+.timeStamps{
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeZoneDiv{
+    width:60%;
+    height: 8vw;
+    position: relative;
+    bottom: 9vw;
+    left: 5vw;
+    font-size: 1vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 0.1vw solid silver;
+}
+.pastSpan{
+    border-bottom: 0.1vw solid silver;
+    height: 5vw;
+    width: 65%;
+}
+input[type='checkbox']{
+    position: relative;
+    height: 1.2vw;
+    width: 1.2vw;
+    appearance: none;
+    border: 0.11vw solid blue;
+}
+input[type='checkbox']::before{
+    content: "";
+    position: absolute;
+}
+input[type='checkbox']:hover{
+    border: 0.11vw solid gray;
+}
+input[type='checkbox']:checked::before{
+    content: '✔';
+    border: none;
+}
+.masterDiv{
+    height: 8vw;
+
 }
 
-.App-link {
-  color: #61dafb;
+a{
+    text-decoration: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nextWeekSpan,.previousWeekSpan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
